@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Run
         uses: actions/checkout@v4
-        run: |
+      - run: |
           sh hello_world.sh
           exit 1
