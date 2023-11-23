@@ -15,5 +15,3 @@ jobs:
         uses: actions/checkout@v4
       - run: |
           sh hello_world.sh
-          exit 1
-
