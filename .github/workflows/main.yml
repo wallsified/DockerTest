@@ -1,17 +1,19 @@
-name: cd_demo
+name: stack-demo
 
-on:
+on: # specify the build to trigger the automated ci/cd
   push:
     branches:
-      -"main"
+      - "main"
 
 jobs:
+
   test:
-    name: Test hello_world
-    runs-on: ubuntu-latest
+    name: Test function hello_world
+    runs-on: ubuntu-latest # specify the build machine
     steps:
-      - name: Run
+      - name: Run assert checks
         uses: actions/checkout@v4
       - run: |
           sh hello_world.sh
           exit 1
+
